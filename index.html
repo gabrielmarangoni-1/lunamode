@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUNA MODE — Luxury Fashion House</title>
+  <meta name="description" content="LUNA MODE — Haute Couture contemporânea, minimalismo arquitetônico e alfaiataria experimental. Coleção Primavera / Verão 2026.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23EDE7DC'>L</text></svg>">
+
+  <!-- Google Fonts: Syne (Headings) & Sora (Body/Metadata) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'luna-bg': '#0A0C0E',
+            'luna-surface': '#101317',
+            'luna-elevated': '#15191E',
+            'luna-text': '#EDE7DC',
+            'luna-muted': '#9EA5A8',
+            'luna-amber': '#E8913C',
+            'luna-teal': '#2E6B72',
+            'luna-border': 'rgba(237, 231, 220, 0.13)',
+          },
+          fontFamily: {
+            display: ['Syne', 'sans-serif'],
+            body: ['Sora', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Design System & Motion CSS -->
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body class="bg-luna-bg text-luna-text font-body antialiased selection:bg-luna-amber selection:text-luna-bg overflow-x-hidden">
+
+  <!-- =========================================================================
+       1. NAVIGATION / HEADER (58px Fixed Glass Blur)
+       ========================================================================= -->
+  <header class="site-header" role="banner">
+    <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12 flex items-center justify-between">
+      
+      <!-- Brand Logo Wordmark -->
+      <a href="#" class="font-display font-extrabold text-lg md:text-xl tracking-tighter uppercase text-luna-text hover:text-luna-amber transition-colors duration-300" aria-label="LUNA MODE Home">
+        LUNA MODE
+      </a>
+
+      <!-- Desktop Links -->
+      <nav class="hidden md:flex items-center gap-8 lg:gap-12" aria-label="Navegação Principal">
+        <a href="#new-arrivals" class="nav-link">New Arrivals</a>
+        <a href="#collection" class="nav-link">Collections</a>
+        <a href="#lookbook" class="nav-link">Lookbook</a>
+        <a href="#philosophy" class="nav-link">Philosophy</a>
+        <a href="#campaign" class="nav-link">Campaign</a>
+      </nav>
+
+      <!-- CTA & Mobile Trigger -->
+      <div class="flex items-center gap-4">
+        <a href="#catalog" class="nav-btn-shop hidden sm:inline-block">Shop Now</a>
+        
+        <button type="button" class="btn-mobile-menu md:hidden text-luna-text p-2 focus:outline-none" aria-label="Abrir Menu" aria-expanded="false">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Overlay -->
+  <div class="mobile-menu-drawer" aria-hidden="true">
+    <div class="flex justify-between items-center mb-12">
+      <span class="font-display font-extrabold text-2xl tracking-tighter uppercase">LUNA MODE</span>
+      <button type="button" class="btn-mobile-close p-2 text-luna-text" aria-label="Fechar Menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-6 text-xl font-display font-bold tracking-tight">
+      <a href="#new-arrivals" class="hover:text-luna-amber transition-colors">NEW ARRIVALS</a>
+      <a href="#collection" class="hover:text-luna-amber transition-colors">COLLECTIONS</a>
+      <a href="#lookbook" class="hover:text-luna-amber transition-colors">LOOKBOOK</a>
+      <a href="#deck" class="hover:text-luna-amber transition-colors">INTERACTIVE DECK</a>
+      <a href="#philosophy" class="hover:text-luna-amber transition-colors">PHILOSOPHY</a>
+      <a href="#campaign" class="hover:text-luna-amber transition-colors">CAMPAIGN</a>
+      <a href="#catalog" class="hover:text-luna-amber transition-colors text-luna-amber">SHOP COLLECTION</a>
+    </nav>
+    <div class="mt-auto pt-8 border-t border-luna-border flex justify-between items-center text-xs tracking-widest text-luna-muted font-body">
+      <span>PARIS / SÃO PAULO</span>
+      <span>EST. 2026</span>
+    </div>
+  </div>
+
+  <main>
+    <!-- =========================================================================
+         2. HERO — PORTAL OPENING EXPERIENCE (250vh Sticky Portal)
+         ========================================================================= -->
+    <section class="hero-scroll-container" aria-label="Hero Experience">
+      <div class="hero-sticky-stage">
+
+        <!-- Two Portal Panels (Left & Right Architectural Portals) -->
+        <div class="portal-panel portal-panel-left">
+          <div class="portal-wireframe"></div>
+          <div class="meta-label">Spring / Summer 2026</div>
+          <div class="stroke-number text-5xl md:text-7xl opacity-20">01</div>
+          <div class="meta-label">Architecture of Form</div>
+        </div>
+
+        <div class="portal-panel portal-panel-right">
+          <div class="portal-wireframe"></div>
+          <div class="meta-label text-right">Paris / São Paulo</div>
+          <div class="stroke-number text-5xl md:text-7xl text-right opacity-20">LM</div>
+          <div class="meta-label text-right">Edition No. 01</div>
+        </div>
+
+        <!-- Typography Split: LUNA (Left) and MODE (Right) -->
+        <div class="hero-split-wrapper">
+          <span class="split-luna">LUNA</span>
+          <span class="split-mode">MODE</span>
+        </div>
+
+        <!-- Controlled Accent Particles (Amber Glow Points) -->
+        <div class="hero-particle particle-1" aria-hidden="true"></div>
+        <div class="hero-particle particle-2" aria-hidden="true"></div>
+
+        <!-- Hero Reveal: Laptop "Website inside Website" -->
+        <div class="hero-laptop-container">
+          <div class="laptop-frame">
+            <div class="flex items-center gap-1.5 pb-2 px-1">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-500/60 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/60 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-500/60 inline-block"></span>
+              <span class="ml-3 text-[10px] text-luna-muted font-mono tracking-wider opacity-70">lunamode.couture/flagship-experience</span>
+            </div>
+            <div class="laptop-screen-glass">
+              <img 
+                src="assets/hero-laptop.jpg" 
+                data-fallback="assets/Gemini_Generated_Image_z82azlz82azlz82a.jpg"
+                alt="LUNA MODE Digital Flagship Showcase no Laptop"
+                loading="eager"
+                decoding="async"
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+          <span class="meta-label tracking-[0.25em] text-[10px]">SCROLL TO ENTER</span>
+          <div class="scroll-line"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. SECTION — EDITORIAL STATEMENT (Section 01)
+         ========================================================================= -->
+    <section id="new-arrivals" class="editorial-statement-section">
+      <div class="statement-bg-number stroke-number">01</div>
+
+      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Left: Floating Circular Campaign Element -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-start">
+          <div class="floating-circle-frame">
+            <div class="floating-circle-inner">
+              <img 
+                src="assets/model-01.jpg" 
+                data-fallback="assets/Gemini_Generated_Image_5iih315iih315iih.jpg"
+                alt="Helena Vance — Campanha LUNA MODE" 
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Editorial Statement & Typographic Rhythm -->
+        <div class="lg:col-span-7 flex flex-col justify-center">
+          <div class="flex items-center gap-3 mb-6">
+            <span class="w-2 h-2 rounded-full bg-luna-amber"></span>
+            <span class="meta-label text-luna-amber">Editorial Manifesto · 2026</span>
+          </div>
+
+          <h2 class="headline-display text-3xl sm:text-5xl lg:text-6xl text-luna-text mb-8 leading-[0.95]">
+            THE NEW LANGUAGE<br>
+            OF EVERYDAY FORM.
+          </h2>
+
+          <div class="hairline-divider mb-8"></div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-luna-muted text-sm sm:text-base font-light leading-relaxed">
+            <p>
+              Rejeitamos o efêmero para esculpir peças que respondem à gravidade, ao corpo e ao tempo. Cada silhueta é construída a partir de princípios de pureza geométrica e tecidos puros de alta fiação.
+            </p>
+            <p>
+              Nossa alfaiataria contemporânea funde a tradição parisiense com a vivacidade orgânica e arquitetônica de São Paulo. Menos adorno, mais presença estrutural.
+            </p>
+          </div>
+
+          <div class="mt-10 flex items-center gap-8">
+            <div>
+              <span class="meta-label block text-xs text-luna-text">COORDENADAS</span>
+              <span class="text-xs text-luna-muted font-mono">48.8566° N / 23.5505° W</span>
+            </div>
+            <div class="w-px h-8 bg-luna-border"></div>
+            <div>
+              <span class="meta-label block text-xs text-luna-text">MATERIALIDADE</span>
+              <span class="text-xs text-luna-muted">Linho Cru & Seda Orgânica</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SECTION — COLLECTION 01 (Asymmetric Editorial Two-Column)
+         ========================================================================= -->
+    <section id="collection" class="collection-section">
+      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+          
+          <!-- Left Column (Sticky Title & Editorial Rationale) -->
+          <div class="lg:col-span-5 lg:sticky lg:top-32 self-start flex flex-col justify-between">
+            <div>
+              <span class="meta-label text-luna-amber block mb-4">SEASON CAPSULE 01</span>
+              <h2 class="headline-display text-4xl sm:text-6xl text-luna-text mb-6">
+                EPHEMERAL<br>STRUCTURE
+              </h2>
+              <p class="text-luna-muted text-sm sm:text-base font-light leading-relaxed mb-8">
+                Cortes retos, ombros desestruturados e tecidos naturais respiráveis. Uma coleção concebida para transitar entre a imponência dos espaços de concreto e a suavidade da luz natural.
+              </p>
+
+              <!-- Technical Metadata List -->
+              <div class="border-t border-b border-luna-border py-6 flex flex-col gap-4 mb-8">
+                <div class="flex justify-between items-center text-xs">
+                  <span class="meta-label">CORTE</span>
+                  <span class="text-luna-text font-mono">Relaxed Architectural Fit</span>
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                  <span class="meta-label">PRODUÇÃO</span>
+                  <span class="text-luna-text font-mono">Edição Limitada (120 Peças)</span>
+                </div>
+                <div class="flex justify-between items-center text-xs">
+                  <span class="meta-label">ORIGEM</span>
+                  <span class="text-luna-text font-mono">Atelier São Paulo / Paris</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="#catalog" class="nav-btn-shop text-center w-full sm:w-auto inline-block">
+              Ver Catálogo Completo
+            </a>
+          </div>
+
+          <!-- Right Column (Asymmetric Image Staggering) -->
+          <div class="lg:col-span-7 flex flex-col gap-12 sm:gap-16">
+            
+            <!-- Lead Editorial Image -->
+            <div class="editorial-img-reveal border border-luna-border">
+              <div class="relative aspect-[3/4] w-full overflow-hidden bg-luna-elevated">
+                <img 
+                  src="assets/model-01.jpg" 
+                  data-fallback="assets/Gemini_Generated_Image_5iih315iih315iih.jpg"
+                  alt="Helena Vance — Linho Cru e Alfaiataria" 
+                  loading="lazy"
+                  decoding="async"
+                >
+                <div class="absolute bottom-4 left-4 z-10 bg-luna-bg/80 backdrop-blur-md px-4 py-2 border border-luna-border">
+                  <span class="meta-label text-[10px] text-luna-text">FIG. 01 — HELENA VANCE</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Staggered Secondary Image -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 items-end">
+              <div class="editorial-img-reveal border border-luna-border sm:translate-y-8">
+                <div class="relative aspect-[4/5] w-full overflow-hidden bg-luna-elevated">
+                  <img 
+                    src="assets/model-03.jpg" 
+                    data-fallback="assets/Gemini_Generated_Image_h7au9kh7au9kh7au.jpg"
+                    alt="Maya Lin — Sobrecamisa Urbana Algodão Puro" 
+                    loading="lazy"
+                    decoding="async"
+                  >
+                  <div class="absolute bottom-4 left-4 z-10 bg-luna-bg/80 backdrop-blur-md px-3 py-1.5 border border-luna-border">
+                    <span class="meta-label text-[9px] text-luna-text">FIG. 02 — URBAN WEAVE</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Detail Card -->
+              <div class="p-8 bg-luna-surface border border-luna-border flex flex-col justify-between h-fit">
+                <span class="stroke-number text-4xl block mb-4">02</span>
+                <p class="text-xs text-luna-muted uppercase tracking-widest leading-loose mb-6">
+                  "O luxo contemporâneo não busca chamar atenção pelo ruído, mas pelo silêncio irrepreensível de um caimento perfeito."
+                </p>
+                <span class="meta-label text-[10px] text-luna-amber">STUDIO LUNA MODE</span>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. SECTION — THE LOOKBOOK (Horizontal Runway Visuals)
+         ========================================================================= -->
+    <section id="lookbook" class="lookbook-section py-24 border-b border-luna-border">
+      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12 mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+          <span class="meta-label text-luna-amber block mb-2">RUNWAY & CAMPAIGN</span>
+          <h2 class="headline-display text-4xl sm:text-6xl text-luna-text">THE LOOKBOOK</h2>
+        </div>
+        <p class="text-xs text-luna-muted font-mono tracking-widest max-w-sm">
+          SEQUÊNCIA CURADA DE 04 SILHUETAS FUNDAMENTAIS PARA A TEMPORADA 2026.
+        </p>
+      </div>
+
+      <!-- Horizontal Sequence Container -->
+      <div class="w-full overflow-x-auto pb-8 scrollbar-none">
+        <div class="lookbook-sticky-track">
+          
+          <!-- Look 01 -->
+          <article class="lookbook-item">
+            <div class="lookbook-image-box mb-4">
+              <img 
+                src="assets/model-01.jpg" 
+                data-fallback="assets/Gemini_Generated_Image_5iih315iih315iih.jpg"
+                alt="LOOK 01 — Linen Structure"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="flex justify-between items-baseline mb-1">
+              <h3 class="font-display font-bold text-lg text-luna-text">LOOK 01</h3>
+              <span class="meta-label text-luna-amber text-[10px]">LINEN STRUCTURE</span>
+            </div>
+            <p class="text-xs text-luna-muted font-light">Suéter em tricot verde oliva estruturado sobre poltrona de autor.</p>
+          </article>
+
+          <!-- Look 02 -->
+          <article class="lookbook-item">
+            <div class="lookbook-image-box mb-4">
+              <img 
+                src="assets/model-02.jpg" 
+                data-fallback="assets/Gemini_Generated_Image_iksdv1iksdv1iksd.jpg"
+                alt="LOOK 02 — Urban Essentials"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="flex justify-between items-baseline mb-1">
+              <h3 class="font-display font-bold text-lg text-luna-text">LOOK 02</h3>
+              <span class="meta-label text-luna-teal text-[10px]">URBAN ESSENTIALS</span>
+            </div>
+            <p class="text-xs text-luna-muted font-light">Jaqueta técnica com gola alta e sobreposição em azul marinho profundo.</p>
+          </article>
+
+          <!-- Look 03 -->
+          <article class="lookbook-item">
+            <div class="lookbook-image-box mb-4">
+              <img 
+                src="assets/model-03.jpg" 
+                data-fallback="assets/Gemini_Generated_Image_h7au9kh7au9kh7au.jpg"
+                alt="LOOK 03 — Soft Contrast"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="flex justify-between items-baseline mb-1">
+              <h3 class="font-display font-bold text-lg text-luna-text">LOOK 03</h3>
+              <span class="meta-label text-luna-amber text-[10px]">SOFT CONTRAST</span>
+            </div>
+            <p class="text-xs text-luna-muted font-light">Camiseta clássica branca de algodão penteado com sobrecamisa escura solta.</p>
+          </article>
+
+          <!-- Look 04 -->
+          <article class="lookbook-item">
+            <div class="lookbook-image-box mb-4">
+              <img 
+                src="assets/model-04.jpg" 
+                data-fallback="assets/model-01.jpg"
+                alt="LOOK 04 — Modern Form"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <div class="flex justify-between items-baseline mb-1">
+              <h3 class="font-display font-bold text-lg text-luna-text">LOOK 04</h3>
+              <span class="meta-label text-luna-muted text-[10px]">MODERN FORM</span>
+            </div>
+            <p class="text-xs text-luna-muted font-light">Monólito têxtil em proporções amplas com acabamentos termo-selados.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. SECTION — PRODUCTS / CATALOG (Editorial Luxury Grid)
+         ========================================================================= -->
+    <section id="catalog" class="catalog-section">
+      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12">
+        
+        <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-16 pb-6 border-b border-luna-border">
+          <div>
+            <span class="meta-label text-luna-amber block mb-2">CURATED PIECES</span>
+            <h2 class="headline-display text-4xl sm:text-5xl text-luna-text">SELECTED EDITION</h2>
+          </div>
+          <span class="meta-label text-xs">04 EXCLUSIVIDADES DISPONÍVEIS</span>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
+          
+          <!-- Product 1 -->
+          <article class="product-item group">
+            <div class="product-image-container">
+              <img 
+                src="assets/model-01.jpg" 
+                data-fallback="assets/Gemini_Generated_Image_5iih315iih315iih.jpg"
+                alt="Tricot Oliva Estruturado"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="absolute top-3 right-3 bg-luna-bg/80 backdrop-blur-md px-2.5 py-1 text-[9px] font-mono uppercase text-luna-text border border-luna-border">
+                NEW
+              </div>
+            </div>
+            <span class="meta-label text-[10px] text-luna-amber mb-1">KNITWEAR</span>
+            <h3 class="font-display font-bold text-base text-luna-text group-hover:text-luna-amber transition-colors">
+              Tricot Oliva Estruturado
+            </h3>
+            <p class="text-xs text-luna-muted mt-1 mb-2 font-light">Lã pura 100% merino com trama encorpada.</p>
+            <div class="flex items-center justify-between mt-auto pt-2">
+              <span class="font-body text-sm font-semibold text-luna-text">R$ 1.250</span>
+              <button type="button" class="product-btn-add">Adicionar +</button>
+            </div>
+          </article>
+
+          <!-- Product 2 -->
+          <article class="product-item group">
+            <div class="product-image-container">
+              <img 
+                src="assets/model-02.jpg" 
+                data-fallback="assets/Gemini_Generated_Image_iksdv1iksdv1iksd.jpg"
+                alt="Jaqueta Urbana Corta-Vento"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="absolute top-3 right-3 bg-luna-bg/80 backdrop-blur-md px-2.5 py-1 text-[9px] font-mono uppercase text-luna-text border border-luna-border">
+                EDITION
+              </div>
+            </div>
+            <span class="meta-label text-[10px] text-luna-teal mb-1">OUTERWEAR</span>
+            <h3 class="font-display font-bold text-base text-luna-text group-hover:text-luna-amber transition-colors">
+              Jaqueta Urbana Corta-Vento
+            </h3>
+            <p class="text-xs text-luna-muted mt-1 mb-2 font-light">Tecido hidrorrepelente fosco e zíperes selados.</p>
+            <div class="flex items-center justify-between mt-auto pt-2">
+              <span class="font-body text-sm font-semibold text-luna-text">R$ 1.890</span>
+              <button type="button" class="product-btn-add">Adicionar +</button>
+            </div>
+          </article>
+
+          <!-- Product 3 -->
+          <article class="product-item group">
+            <div class="product-image-container">
+              <img 
+                src="assets/model-03.jpg" 
+                data-fallback="assets/Gemini_Generated_Image_h7au9kh7au9kh7au.jpg"
+                alt="Sobrecamisa Algodão Japonês"
+                loading="lazy"
+                decoding="async"
+              >
+            </div>
+            <span class="meta-label text-[10px] text-luna-amber mb-1">SHIRTING</span>
+            <h3 class="font-display font-bold text-base text-luna-text group-hover:text-luna-amber transition-colors">
+              Sobrecamisa Algodão Puro
+            </h3>
+            <p class="text-xs text-luna-muted mt-1 mb-2 font-light">Botões em corozo natural e caimento fluido.</p>
+            <div class="flex items-center justify-between mt-auto pt-2">
+              <span class="font-body text-sm font-semibold text-luna-text">R$ 890</span>
+              <button type="button" class="product-btn-add">Adicionar +</button>
+            </div>
+          </article>
+
+          <!-- Product 4 -->
+          <article class="product-item group">
+            <div class="product-image-container">
+              <img 
+                src="assets/model-04.jpg" 
+                data-fallback="assets/model-01.jpg"
+                alt="Blazer Alfaiataria Arquitetônica"
+                loading="lazy"
+                decoding="async"
+              >
+              <div class="absolute top-3 right-3 bg-luna-bg/80 backdrop-blur-md px-2.5 py-1 text-[9px] font-mono uppercase text-luna-amber border border-luna-amber/40">
+                LIMITED
+              </div>
+            </div>
+            <span class="meta-label text-[10px] text-luna-muted mb-1">TAILORING</span>
+            <h3 class="font-display font-bold text-base text-luna-text group-hover:text-luna-amber transition-colors">
+              Blazer Geométrico Esculpido
+            </h3>
+            <p class="text-xs text-luna-muted mt-1 mb-2 font-light">Linho belga estruturado com lapela invertida.</p>
+            <div class="flex items-center justify-between mt-auto pt-2">
+              <span class="font-body text-sm font-semibold text-luna-text">R$ 2.450</span>
+              <button type="button" class="product-btn-add">Adicionar +</button>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. INTERACTIVE CARD DECK (Experimental Gesture Carousel)
+         ========================================================================= -->
+    <section id="deck" class="deck-section">
+      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12 mb-12 text-center">
+        <span class="meta-label text-luna-amber block mb-2">INTERACTIVE FASHION DECK</span>
+        <h2 class="headline-display text-3xl sm:text-5xl text-luna-text mb-4">DRAG & EXPLORE</h2>
+        <p class="text-xs text-luna-muted font-light max-w-md mx-auto">
+          Arraste o card superior para os lados além de 20% para lançá-lo e revelar a próxima composição.
+        </p>
+      </div>
+
+      <!-- 3D Stacked Container -->
+      <div class="deck-container">
+        
+        <!-- Card 01 -->
+        <div class="deck-card" data-index="0">
+          <div class="deck-card-image">
+            <img 
+              src="assets/model-01.jpg" 
+              data-fallback="assets/Gemini_Generated_Image_5iih315iih315iih.jpg"
+              alt="LOOK 01 — Helena Vance"
+            >
+          </div>
+          <div class="deck-card-body">
+            <div>
+              <span class="meta-label text-[9px] text-luna-amber">LOOK 01</span>
+              <h4 class="font-display font-bold text-base text-luna-text">HELENA VANCE</h4>
+            </div>
+            <span class="text-xs font-mono text-luna-muted">LINEN STRUCT</span>
+          </div>
+        </div>
+
+        <!-- Card 02 -->
+        <div class="deck-card" data-index="1">
+          <div class="deck-card-image">
+            <img 
+              src="assets/model-02.jpg" 
+              data-fallback="assets/Gemini_Generated_Image_iksdv1iksdv1iksd.jpg"
+              alt="LOOK 02 — Kenji Sato"
+            >
+          </div>
+          <div class="deck-card-body">
+            <div>
+              <span class="meta-label text-[9px] text-luna-teal">LOOK 02</span>
+              <h4 class="font-display font-bold text-base text-luna-text">KENJI SATO</h4>
+            </div>
+            <span class="text-xs font-mono text-luna-muted">URBAN WEAVE</span>
+          </div>
+        </div>
+
+        <!-- Card 03 -->
+        <div class="deck-card" data-index="2">
+          <div class="deck-card-image">
+            <img 
+              src="assets/model-03.jpg" 
+              data-fallback="assets/Gemini_Generated_Image_h7au9kh7au9kh7au.jpg"
+              alt="LOOK 03 — Maya Lin"
+            >
+          </div>
+          <div class="deck-card-body">
+            <div>
+              <span class="meta-label text-[9px] text-luna-amber">LOOK 03</span>
+              <h4 class="font-display font-bold text-base text-luna-text">MAYA LIN</h4>
+            </div>
+            <span class="text-xs font-mono text-luna-muted">POPLIN CHIC</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 1px Progress Indicator -->
+      <div class="deck-progress-wrapper">
+        <span class="deck-progress-current meta-label text-xs font-mono text-luna-text">01 / 03</span>
+        <div class="deck-progress-bar">
+          <div class="deck-progress-fill"></div>
+        </div>
+        <button type="button" class="btn-deck-reset meta-label text-[10px] text-luna-muted hover:text-luna-amber transition-colors">
+          REINICIAR
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. SECTION — BRAND PHILOSOPHY ("FORM FOLLOWS FEELING.")
+         ========================================================================= -->
+    <section id="philosophy" class="philosophy-section">
+      <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12">
+        
+        <span class="meta-label text-luna-amber block mb-8">MANIFESTO 2026</span>
+
+        <div class="flex flex-col gap-2 mb-16">
+          <span class="philosophy-line">FORM</span>
+          <span class="philosophy-line text-luna-muted">FOLLOWS</span>
+          <span class="philosophy-line">FEELING.</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 pt-12 border-t border-luna-border">
+          <div>
+            <span class="meta-label block text-xs text-luna-text mb-2">01 / ARQUITETURA</span>
+            <p class="text-xs text-luna-muted font-light leading-relaxed">
+              Inspirados pelo brutalismo brasileiro e o modernismo escandinavo: o espaço livre ao redor da peça é tão importante quanto o tecido.
+            </p>
+          </div>
+
+          <div>
+            <span class="meta-label block text-xs text-luna-text mb-2">02 / SENSORIAL</span>
+            <p class="text-xs text-luna-muted font-light leading-relaxed">
+              O toque da fibra pura contra a pele reage à temperatura corporal, adaptando-se sem rigidez ao movimento natural do dia a dia.
+            </p>
+          </div>
+
+          <div>
+            <span class="meta-label block text-xs text-luna-text mb-2">03 / PERMANÊNCIA</span>
+            <p class="text-xs text-luna-muted font-light leading-relaxed">
+              Não fazemos coleções descartáveis. Cada criação é concebida para durar décadas, envelhecendo com nobreza e caráter.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. SECTION — CAMPAIGN FULL-WIDTH (Cinematic Scroll Zoom & Color)
+         ========================================================================= -->
+    <section id="campaign" class="campaign-section" aria-label="Campanha Visual">
+      <div class="campaign-bg-wrapper">
+        <img 
+          src="assets/model-02.jpg" 
+          data-fallback="assets/Gemini_Generated_Image_iksdv1iksdv1iksd.jpg"
+          alt="LUNA MODE Summer 2026 Visual Campaign"
+          class="campaign-bg-img"
+          loading="lazy"
+          decoding="async"
+        >
+      </div>
+
+      <div class="campaign-overlay"></div>
+
+      <!-- Centered Typography & Discovery CTA -->
+      <div class="relative z-10 text-center px-6">
+        <span class="meta-label text-luna-amber tracking-[0.3em] block mb-4">SUMMER / 2026</span>
+        <h2 class="headline-display text-4xl sm:text-7xl lg:text-8xl text-luna-text mb-8">
+          THE LIGHT OF FORM
+        </h2>
+        <a href="#catalog" class="nav-btn-shop bg-luna-bg/60 backdrop-blur-md">
+          DISCOVER COLLECTION
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       10. FOOTER & GIANT ARCHITECTURAL WORDMARK (20vw)
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="max-w-[1440px] w-full mx-auto px-6 md:px-12">
+      
+      <!-- Newsletter & Brand Heading -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 pb-16 border-b border-luna-border">
+        
+        <div class="lg:col-span-6">
+          <span class="font-display font-extrabold text-2xl text-luna-text tracking-tighter uppercase block mb-3">
+            LUNA MODE
+          </span>
+          <p class="text-xs text-luna-muted font-light max-w-md leading-relaxed">
+            Receba convites privados para pré-lançamentos, lookbooks exclusivos e publicações editoriais do atelier.
+          </p>
+        </div>
+
+        <div class="lg:col-span-6 flex flex-col justify-end">
+          <span class="meta-label text-luna-amber block mb-3">JOIN THE LIST</span>
+          <form class="flex flex-col sm:flex-row gap-4" onsubmit="event.preventDefault(); alert('Inscrição confirmada na lista exclusiva LUNA MODE.');">
+            <input 
+              type="email" 
+              placeholder="Digite seu e-mail profissional" 
+              class="newsletter-input" 
+              required
+            >
+            <button type="submit" class="newsletter-btn whitespace-nowrap">
+              Inscrever-se
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Institutional Links & Credits -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 py-12 text-xs text-luna-muted">
+        <div>
+          <span class="meta-label block text-luna-text mb-4">STUDIO</span>
+          <ul class="flex flex-col gap-2 font-light">
+            <li>Paris: 14 Rue de Turenne</li>
+            <li>São Paulo: Jardins, Al. Lorena</li>
+            <li>contato@lunamode.couture</li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="meta-label block text-luna-text mb-4">DIGITAL</span>
+          <ul class="flex flex-col gap-2 font-light">
+            <li><a href="#" class="hover:text-luna-text transition-colors">Instagram @lunamode</a></li>
+            <li><a href="#" class="hover:text-luna-text transition-colors">Runway Archive</a></li>
+            <li><a href="#" class="hover:text-luna-text transition-colors">Soundtrack & Playlist</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="meta-label block text-luna-text mb-4">SERVICES</span>
+          <ul class="flex flex-col gap-2 font-light">
+            <li><a href="#" class="hover:text-luna-text transition-colors">Private Concierge</a></li>
+            <li><a href="#" class="hover:text-luna-text transition-colors">Bespoke Tailoring</a></li>
+            <li><a href="#" class="hover:text-luna-text transition-colors">Worldwide Shipping</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <span class="meta-label block text-luna-text mb-4">LEGAL</span>
+          <ul class="flex flex-col gap-2 font-light">
+            <li><a href="#" class="hover:text-luna-text transition-colors">Termos de Serviço</a></li>
+            <li><a href="#" class="hover:text-luna-text transition-colors">Política de Privacidade</a></li>
+            <li><a href="#" class="hover:text-luna-text transition-colors">Certificado de Autenticidade</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Gigantic Architectural 20vw Wordmark -->
+    <div class="footer-wordmark" aria-hidden="true">
+      LUNA MODE
+    </div>
+  </footer>
+
+  <!-- Compiled Controller Module -->
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
