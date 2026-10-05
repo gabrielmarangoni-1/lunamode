@@ -5,7 +5,6 @@
   "description": "LUNA MODE — Luxury Digital Flagship Landing Page",
   "scripts": {
     "dev": "npx serve .",
-    "build": "echo 'Static assets ready for deployment'"
   },
   "keywords": ["fashion", "luxury", "editorial", "landing-page", "interactive"],
   "author": "LUNA MODE",
